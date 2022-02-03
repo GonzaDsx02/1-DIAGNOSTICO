@@ -1,0 +1,54 @@
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <button type="button" class="btn btn-outline-light" routerLink="/login">
+        <i class="fas fa-sign-out-alt"></i>
+        Cerrar sesión
+    </button>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+<div class="container mt-3">
+  <form (ngSubmit)="calcular()">
+    <div class="mb-3">
+      <label class="form-label">Ingresa un numero</label>
+      <input type="number" 
+      class="form-control"
+      [(ngModel)]="n"
+      name="n"
+      required 
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">
+        <i class="fas fa-calculator"></i>
+      Calcular
+    </button>
+    
+  </form>
+</div>
+<div class="container mt-5">
+    <table class="table" id="tblFactorial">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col ">Iteración</th>
+                <th scope="col">Espresión</th>
+                <th scope="col">Valor</th>                
+            </tr>
+        </thead>
+        <tbody class="tblFactBody"> 
+        </tbody>
+      </table>
+</div>
